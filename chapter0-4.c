@@ -9,6 +9,9 @@ int main() {
     s_ptr = s;
     e_ptr = s + strlen(s) - 1;
 
+    printf("%c\n", *s_ptr);
+    printf("%c\n", *e_ptr);
+
     while (s_ptr < e_ptr) {
         temp = *s_ptr;
         *s_ptr = *e_ptr;
