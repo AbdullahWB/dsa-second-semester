@@ -24,3 +24,4 @@ int main() {
     printf("%s\n", students[topStudentIndex].name);
     return 0;
 }
+
