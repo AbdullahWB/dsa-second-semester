@@ -5,19 +5,25 @@ int main()
 
     int a[5] = {1, 2, 3, 4, 5};
 
-    for (int *i = a; i <= (a + 4); i++)
-    {
-        printf("%d \n", *i);
-    }
-    printf("==========\n");
+    int n = 5;
+    int *p = &a[n];
+    int *q = a;
+    int and = p - q;
+    printf("%d\n", and);
 
-    for(int i = 0; i < 5; i++){
-        printf("%d \n", a + i);
-        printf("%d \n", *(a + i));
-        printf("%d \n", i[a]);
-        printf("%d \n", a[i]);
-        printf("----------\n");
-    }
+    // for (int *i = a; i <= (a + 4); i++)
+    // {
+    //     printf("%d \n", *i);
+    // }
+    // printf("==========\n");
+
+    // for(int i = 0; i < 5; i++){
+    //     printf("%d \n", a + i);
+    //     printf("%d \n", *(a + i));
+    //     printf("%d \n", i[a]);
+    //     printf("%d \n", a[i]);
+    //     printf("----------\n");
+    // }
 
     // int i = 0, cnt = 0;
     // int arr[1] = {0};
