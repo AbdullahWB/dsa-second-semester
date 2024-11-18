@@ -18,6 +18,25 @@ void count_of_nodes(struct Node *head)
     printf("Number of nodes in the linked list: %d\n", count);
 }
 
+struct Node* add_beginning(struct Node *head, int data){
+    struct Node *ptr = malloc(sizeof(struct Node));
+    ptr->data = data;
+    ptr->link = NULL;
+
+    ptr->link = head;
+    head = ptr;
+    return head;
+}
+
+void add_beg(struct node **head, int data){
+    struct Node *ptr = malloc(sizeof(struct Node));
+    ptr->data = data;
+    ptr->link = NULL;
+
+    ptr->link = *head;
+    *head = ptr;
+}
+
 void add_at_end(struct Node *head, int data)
 {
     struct Node *ptr, *temp;
@@ -56,21 +75,12 @@ int main()
     head->data = 40;
     head->link = NULL;
 
-    // struct Node *second = malloc(sizeof(struct Node));
-    // second->data = 50;
-    // second->link = NULL;
-    // head->link = second;
-
-    // second = malloc(sizeof(struct Node));
-    // second->data = 60;
-    // second->link = NULL;
-
-    // head->link->link = second;
-
     add_at_end(head, 70);
     add_at_end(head, 80);
     add_at_end(head, 90);
     count_of_nodes(head);
+    // head = add_beginning(head, 30);
+    add_beg(&head, 30);
     printList(head);
     // printf("\nthis is head %d ", head->data);
 

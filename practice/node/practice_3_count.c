@@ -8,6 +8,8 @@ struct Node{
 
 void count_of_nodes(struct Node* head){
     int count = 0;
+    struct Node *p;
+    p = head->link;
     while(head!=NULL){
         count++;
         head = head->link;
@@ -42,7 +44,14 @@ int main()
 
     count_of_nodes(head);
     printList(head);
-    // printf("\nthis is head %d ", head->data);
+    int count=0;
+    struct Node *p;
+    p = head->link;
+    while(p!=NULL){
+        count++;
+        p = p->link;
+    }
+    printf("\nthis is head %d ", head->data);
 
     return 0;
 }
